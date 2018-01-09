@@ -5,7 +5,7 @@ export default class Header extends Component {
 		return (
 			<div>
 				<header id="header">
-					<h1><a href="#">Art Factory</a></h1>
+					<h1><a href="#">ARTISTERIA</a></h1>
 				
 					<a href="#banner">Hello</a>
 					<a href="#about">About</a>

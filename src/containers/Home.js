@@ -15,14 +15,18 @@ class Home extends Component {
 			<section id="banner" data-video="images/banner">
 				<div className="inner" style={{marginBottom: '2em'}}>
 					<header>
-						<h1>Artisteria Festival</h1>
+						<h1 style={{textTransform: 'uppercase'}}>Artisteria Festival</h1>
 
-						<div style={{marginTop: '1em'}} className="12u">
-							<img style={{maxWidth: '300px'}} src="images/favicon.png"/>
+						<div style={{marginTop: '.8em', maxHeight: '300px', maxWidth: '300px'}} className="12u logo center-logo">
+							<img style={{maxWidth: '90%', marginTop: '1em'}} src="images/favicon.png"/>
 						</div>
 
-						<p>Lorem ipsum dolor sit amet,<br />
-						vivamus vitae libero in nulla iaculis eleifend non sit amet nulla.</p>
+						<h3 className="desc">
+							"It is never too late to be &nbsp;
+							<br />
+							who you might have been."
+							<span style={{fontWeight: '400', fontSize: '0.8em'}}>&nbsp; George Elliot</span>
+						</h3>
 					</header>
 					<a href="#main" className="button big alt scrolly"> Learn More </a>
 				</div>
@@ -210,7 +214,11 @@ class Home extends Component {
 				<div className="inner">
 					<header>
 						<h2>Apply Now!</h2>
-						<p className="contact-sub">Fusce fringilla enim sit amet lectus sollicitudin, eu tincidunt odio semper.</p>
+						<p className="contact-sub">
+							This section of the website is under development.
+							<br/>
+							Please come again at a later date.
+						</p>
 					</header>
 					<div className="custom-form">
 						<form>

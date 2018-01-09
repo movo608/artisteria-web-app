@@ -42,7 +42,8 @@ export default class Footer extends Component {
 						<li><a href="#" className="icon fa-instagram"><span className="label">Instagram</span></a></li>
 						<li><a href="#" className="icon fa-snapchat"><span className="label">Snapchat</span></a></li>
 					</ul>
-					&copy; Art Factory 2017. Design and Images: <a href="https://web.facebook.com/moldovan.andrei.391">Moldovan Andrei</a>
+					&copy; ARTISTERIA 2017. Design and Images: <a href="https://web.facebook.com/moldovan.andrei.391">Moldovan Andrei</a>
+					<p>Powered by <a href="#">React.js</a></p>
 				</div>
 			</footer>
 		);

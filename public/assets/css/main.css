@@ -3648,7 +3648,7 @@
 		-webkit-justify-content: center;
 		-ms-justify-content: center;
 		justify-content: center;
-		background-image: url("../../images/banner.jpg");
+		background-image: url("../../images/bg01.jpg");
 		background-position: center;
 		background-size: cover;
 		background-repeat: no-repeat;
@@ -3839,4 +3839,37 @@
 
 video {
 	display: none !important;
+}
+
+/* Doamne ocroteste-ne */
+
+.logo {
+	border: 2px solid rgba(4, 22, 37, 0);
+	border-radius: 100%;
+	/*background-color: rgba(4, 22, 37, 0.75);*/
+	background-color: rgba(0, 0, 0, 0.5);
+}
+
+.center-logo {
+	margin-right: auto !important;
+	margin-left: auto !important;
+}
+
+/**
+* Mobile-responsiv for .banner > .desc
+*/
+@media screen and (max-width: 800px) {
+	.desc {
+		margin-top: 1em;
+	}
+}
+
+@media screen and (min-width: 800px) {
+	.desc {
+		margin-top: .8em;
+	}
+}
+
+#banner .inner {
+	margin-top: 1.5em;
 }
