@@ -7,6 +7,13 @@ use yii\helpers\Json;
 use app\models\Mentors;
 
 /**
+* Allow all-cross-origin AJAX-let request.
+* Headers allowance for the header type.
+*/
+header("Access-Control-Allow-Origin: *");
+header("Access-Control-Allow-Headers: Origin, X-Requested-With, Content-Type, Accept");
+
+/**
  * CoreController core api Controller class.
  * 
  * Handles cross-site requests.

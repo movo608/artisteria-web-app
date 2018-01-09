@@ -33,14 +33,14 @@ $this->params['breadcrumbs'][] = $this->title;
             'image1' => [
                 'attribute' => 'image1',
                 'value' => function ($value) {
-                    return '/artisteria/api/uploads/' . $value->image1;
+                    return '/artisteria-web-app/api/uploads/' . $value->image1;
                 },
                 'format' => ['image', ['class' => 'col-md-5 col-sm-7']]
             ],
             'image2' => [
                 'attribute' => 'image2',
                 'value' => function ($value) {
-                    return '/artisteria/api/uploads/' . $value->image2;
+                    return '/artisteria-web-app/api/uploads/' . $value->image2;
                 },
                 'format' => ['image', ['class' => 'col-md-5 col-sm-7']]
             ],

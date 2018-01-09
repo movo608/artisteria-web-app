@@ -1,14 +1,23 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
+import { connect } from 'react-redux'
 
-export default class Home extends Component {
+//import actions
+import { getMentors } from '../actions'
+import { bindActionCreators } from 'redux'
+
+class Home extends Component {
+	componentWillMount() {
+		this.props.getMentors();
+	}
+
 	renderBanner() {
 		return (
 			<section id="banner" data-video="images/banner">
-				<div className="inner">
+				<div className="inner" style={{marginBottom: '2em'}}>
 					<header>
 						<h1>Artisteria Festival</h1>
 
-						<div style={{marginTop: '3em', marginBottom: '3em'}} className="12u">
+						<div style={{marginTop: '1em'}} className="12u">
 							<img style={{maxWidth: '300px'}} src="images/favicon.png"/>
 						</div>
 
@@ -24,7 +33,7 @@ export default class Home extends Component {
 	renderMain() {
 		return (
 			<div id="main">
-				<section className="wrapper style1">
+				<section className="wrapper style1" id="about">
 					<div className="inner">
 						<header className="align-center">
 							<h2>Who are we?</h2>
@@ -66,7 +75,7 @@ export default class Home extends Component {
 
 	renderSchedule() {
 		return (
-			<section className="wrapper">
+			<section className="wrapper" id="schedule">
 				<div className="inner">
 					<header className="align-center">
 						<h2>The Schedule</h2>
@@ -197,7 +206,7 @@ export default class Home extends Component {
 
 	renderForm() {
 		return (
-			<section className="wrapper style2">
+			<section className="wrapper style2" id="form">
 				<div className="inner">
 					<header>
 						<h2>Apply Now!</h2>
@@ -214,7 +223,7 @@ export default class Home extends Component {
 
 	renderMentors() {
 		return (
-			<section className="wrapper">
+			<section className="wrapper" id="mentors">
 				<div className="inner">
 					<header>
 						<h2>Mentors</h2>
@@ -257,3 +266,15 @@ export default class Home extends Component {
 		);
 	}
 }
+
+const mapStateToProps = (state) => {
+	return {
+
+	};
+}
+
+const mapDispatchToProps = (dispatch) => {
+	return bindActionCreators({ getMentors }, dispatch);
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Home)

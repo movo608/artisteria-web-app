@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import { Link } from 'react-router-dom'
 
 export default class Header extends Component {
 	render() {
@@ -8,10 +7,11 @@ export default class Header extends Component {
 				<header id="header">
 					<h1><a href="#">Art Factory</a></h1>
 				
-					<a href="#">Section One</a>
-					<a href="#">Section Two</a>
-					<a href="#">Section Three</a>
-					<a href="#">Section Four</a>
+					<a href="#banner">Hello</a>
+					<a href="#about">About</a>
+					<a href="#schedule">Schedule</a>
+					<a href="#form">Form</a>
+					<a href="#mentors">Mentors</a>
 				</header>
 			</div>
 		);
