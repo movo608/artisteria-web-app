@@ -7,13 +7,17 @@ export default class LandingLayout extends Component {
     render() {
         return (
             <div className="app">
-                <Header />
+                <div className="site-container">
+                    <div className="site-pusher">
+                        <Header />
 
-                <div className="content">
-                    { this.props.children }
+                        <div className="content">
+                            { this.props.children }
+                        </div>
+
+                        <Footer />
+                    </div>
                 </div>
-
-                <Footer />
             </div>
         );
     }

@@ -11,6 +11,12 @@ import LandingLayout from './layouts/LandingLayout'
 
 //import containers
 import Home from './containers/Home'
+import Mentor from './containers/Mentor'
+import AboutUs from './containers/AboutUs'
+import AboutFestival from './containers/AboutFestival'
+import Mentors from './containers/Mentors'
+import Artist from './containers/Artist'
+import Artists from './containers/Artists'
 
 //import reducers
 import reducer from './reducers'
@@ -25,10 +31,20 @@ const store = createStore (
 
 render(
 	<Provider store={ store }>
-		<Router>
+		<Router 
+			forceRefresh={ false }>
 			<div>
 				<Switch>
 					<Route exact path='/' render={ () => <LandingLayout><Home/></LandingLayout> } />
+
+					<Route exact path='/about/us' render={ () => <LandingLayout><AboutUs/></LandingLayout> } />
+					<Route exact path='/about/festival' render={ () => <LandingLayout><AboutFestival/></LandingLayout> } />
+
+					<Route path='/mentor/:id' render={ (props) => <LandingLayout><Mentor {...props}/></LandingLayout> } />
+					<Route exact path='/mentors' render={ () => <LandingLayout><Mentors/></LandingLayout> } />
+
+					<Route path='/artist/:id' render={ (props) => <LandingLayout><Artist {...props}/></LandingLayout> } />
+					<Route exact path='/artists' render={ () => <LandingLayout><Artists /></LandingLayout> } />
 				</Switch>
 			</div>
 		</Router>

@@ -30,6 +30,7 @@ $this->params['breadcrumbs'][] = $this->title;
         'attributes' => [
             'id',
             'name',
+            'category',
             'image1' => [
                 'attribute' => 'image1',
                 'value' => function ($value) {

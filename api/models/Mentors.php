@@ -29,10 +29,11 @@ class Mentors extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['name', 'image1', 'image2', 'description'], 'required'],
+            [['name', 'image1', 'image2', 'description', 'category'], 'required'],
             [['name'], 'string', 'max' => 64],
+            [['category'], 'string', 'max' => 32],
             [['description'], 'string', 'max' => 256],
-            [['image1', 'image2'], 'file', 'skipOnEmpty' => false, 'extensions' => 'png, jpg']
+            [['image1', 'image2'], 'file', 'skipOnEmpty' => false, 'extensions' => 'png, jpg'],
         ];
     }
 
@@ -46,6 +47,7 @@ class Mentors extends \yii\db\ActiveRecord
             'name' => 'Name',
             'image1' => 'Image1',
             'image2' => 'Image2',
+            'catgory' => 'Category',
             'description' => 'Description',
         ];
     }

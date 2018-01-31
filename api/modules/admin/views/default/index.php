@@ -32,6 +32,30 @@ $this->title = 'Admin';
                         Admin Mentors
                     </td>
                 </tr>
+                <tr id="artists">
+                    <td>
+                        <?= Html::a('/admin/artists', ['/admin/artists']) ?>
+                    </td>
+                    <td>
+                        Admin Artists
+                    </td>
+                </tr>
+                <tr id="valid-categories">
+                    <td>
+                        <?= Html::a('/admin/valid-categories', ['/admin/valid-categories']) ?>
+                    </td>
+                    <td>
+                        Admin Valid Categories
+                    </td>
+                </tr>
+                <tr id="partners">
+                    <td>
+                        <?= Html::a('/admin/partners', ['/admin/partners']) ?>
+                    </td>
+                    <td>
+                        Admin Partners
+                    </td>
+                </tr>
         </tbody>
     </table>
 </div>

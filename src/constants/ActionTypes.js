@@ -1,1 +1,8 @@
 export const GET_MENTORS = 'GET_MENTORS'
+export const GET_MENTOR_INFO = 'GET_MENTOR_INFO'
+export const CHANGE_NAVBAR = 'CHANGE_NAVBAR'
+export const REVERT_NAVBAR = 'REVERT_NAVBAR'
+export const GET_ARTISTS = 'GET_ARTISTS'
+export const GET_ARTIST_INFO = 'GET_ARTIST_INFO'
+export const GET_PARTNERS = 'GET_PARTNERS'
+export const SUBMIT_FORM = 'SUBMIT_FORM'

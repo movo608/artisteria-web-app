@@ -1,34 +1,48 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
+import _ from 'lodash'
+import { Link } from 'react-router-dom'
+import { UPLOADS } from '../constants/RootURls'
+import { bindActionCreators } from 'redux'
+import Partners from '../containers/Partners'
+import Form from '../containers/Form'
 
 //import actions
-import { getMentors } from '../actions'
-import { bindActionCreators } from 'redux'
+import { getMentors, revertNavbar, getArtists } from '../actions'
 
 class Home extends Component {
-	componentWillMount() {
+	componentDidMount() {
+		this.props.getArtists();
 		this.props.getMentors();
+		this.props.revertNavbar();
 	}
 
 	renderBanner() {
 		return (
 			<section id="banner" data-video="images/banner">
-				<div className="inner" style={{marginBottom: '2em'}}>
+				<div className="inner">
 					<header>
-						<h1 style={{textTransform: 'uppercase'}}>Artisteria Festival</h1>
-
-						<div style={{marginTop: '.8em', maxHeight: '300px', maxWidth: '300px'}} className="12u logo center-logo">
-							<img style={{maxWidth: '90%', marginTop: '1em'}} src="images/favicon.png"/>
+						<div style={{maxHeight: '250px', maxWidth: '250px'}} className="12u logo center-logo">
+							<img style={{maxWidth: '90%'}} src="images/favicon.png" alt='' />
+							<h3 
+								style={{
+									fontFamily: 'Simplifica',
+									letterSpacing: '2px',
+									marginTop: '-20px',
+									fontWeight: '800'
+								}}>
+									FESTIVAL
+							</h3>
 						</div>
 
-						<h3 className="desc">
+						<h4 className="desc">
 							"It is never too late to be &nbsp;
 							<br />
 							who you might have been."
 							<span style={{fontWeight: '400', fontSize: '0.8em'}}>&nbsp; George Elliot</span>
-						</h3>
+						</h4>
 					</header>
-					<a href="#main" className="button big alt scrolly"> Learn More </a>
+					<a href="#form" className="button big alt scrolly"> Join Us! </a>
 				</div>
 			</section>
 		);
@@ -46,33 +60,26 @@ class Home extends Component {
 						<div className="flex flex-2">
 							<div className="video col">
 								<div className="image fit">
-									<img src="images/suciu.jpg" alt="" />
-									<div className="arrow">
-										<div className="icon fa-play"></div>
-									</div>
+									<img src="images/about-us.png" alt="" />
 								</div>
 								<p className="caption">
-									Primary description of the whole idea of the project.
+									You're probably wondering who we are. Do not worry! We are gladly going to tell you.
 								</p>
-								<a href="generic.html" className="link"><span>Click Me</span></a>
+								<Link to="/about/us" className="link"><span>Learn More</span></Link>
 							</div>
 							<div className="video col">
 								<div className="image fit">
-									<img src="images/capoeira.jpg" alt="" />
-									<div className="arrow">
-										<div className="icon fa-play"></div>
-									</div>
+									<img src="images/elephant.png" alt="" />
 								</div>
 								<p className="caption">
 									The whole program the festival is going to offer.
 								</p>
-								<a href="generic.html" className="link"><span>Click Me</span></a>
+								<Link to="/about/festival" className="link"><span>Learn More</span></Link>
 							</div>
 						</div>
 					</div>
 				</section>
-
-				{ this.renderSchedule() }
+				{ /*this.renderSchedule()*/ }
 			</div>
 		);
 	}
@@ -208,27 +215,6 @@ class Home extends Component {
 		);
 	}
 
-	renderForm() {
-		return (
-			<section className="wrapper style2" id="form">
-				<div className="inner">
-					<header>
-						<h2>Apply Now!</h2>
-						<p className="contact-sub">
-							This section of the website is under development.
-							<br/>
-							Please come again at a later date.
-						</p>
-					</header>
-					<div className="custom-form">
-						<form>
-						</form>
-					</div>
-				</div>
-			</section>
-		)
-	}
-
 	renderMentors() {
 		return (
 			<section className="wrapper" id="mentors">
@@ -239,37 +225,75 @@ class Home extends Component {
 					</header>
 
 					<div className="flex flex-3">
-						<div className="video col">
-							<div className="image fit">
-								<img src="images/suciu.jpg" alt="" />
-							</div>
-							<p className="caption">
-								Mentor1
-							</p>
-							<a href="generic.html" className="link"><span>Click Me</span></a>
-						</div>
-						<div className="video col">
-							<div className="image fit">
-								<img src="images/capoeira.jpg" alt="" />
-							</div>
-							<p className="caption">
-								Mentor2
-							</p>
-							<a href="generic.html" className="link"><span>Click Me</span></a>
-						</div>
+						{ this.renderOneMentor() }
 					</div>
 				</div>
 			</section>
 		);
 	}
 
+	renderArtists() {
+		return (
+			<section className="wrapper" id="artists">
+				<div className="inner">
+					<header>
+						<h2>Artists</h2>
+						<p className="contact-sub">These are the artists who will LOREM IPSUM DOLOR SIT AMET</p>
+					</header>
+
+					<div className="flex flex-3">
+						{ this.renderOneArtist() }
+					</div>
+				</div>
+			</section>
+		);
+	}
+
+	renderOneMentor() {
+		return _.map(this.props.mentors.mentors, (it) => {
+			return (
+				<div key={it.id} className="video col">
+					<div className="image fit">
+						<img src={`${UPLOADS}${it.image1}`} alt="" />
+					</div>
+					<p className="caption">
+						{ it.name }
+					</p>
+					<Link className="link" to={`/mentor/${it.id}`}></Link>
+				</div>
+			);
+		});
+	}
+
+	renderOneArtist() {
+		return _.map(this.props.artists, (it) => {
+			return (
+				<div key={it.id} className="video col">
+					<div className="image fit">
+						<img src={`${UPLOADS}${it.image1}`} alt="" />
+					</div>
+					<p className="caption">
+						{ it.name }
+					</p>
+					<Link className="link" to={`/artist/${it.id}`}></Link>
+				</div>
+			);
+		});
+	}
+
+	renderPartners() {
+		return <Partners></Partners>;
+	}
+
 	render() {
 		return(
 			<div>
 				{ this.renderBanner() }
+				<Form />
 				{ this.renderMain() }
-				{ this.renderForm() }
+				{ this.renderArtists() }
 				{ this.renderMentors() }
+				{ this.renderPartners() }
 			</div>
 		);
 	}
@@ -277,12 +301,14 @@ class Home extends Component {
 
 const mapStateToProps = (state) => {
 	return {
-
+		mentors: state.getMentors,
+		revert: state.adaptNavbar,
+		artists: state.getArtists.artists
 	};
 }
 
 const mapDispatchToProps = (dispatch) => {
-	return bindActionCreators({ getMentors }, dispatch);
+	return bindActionCreators({ getMentors, revertNavbar, getArtists }, dispatch);
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(Home)

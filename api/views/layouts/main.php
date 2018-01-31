@@ -56,7 +56,13 @@ AppAsset::register($this);
                     'items' => [
                         ['label' => 'Admin Home', 'url' => ['/admin']],
                         '<li class="divider"></li>',
-                        ['label' => 'Mentors', 'url' => ['/admin/mentors']]
+                        ['label' => 'Mentors', 'url' => ['/admin/mentors']],
+                        '<li class="divider"></li>',
+                        ['label' => 'Artists', 'url' => ['/admin/artists']],
+                        '<li class="divider"></li>',
+                        ['label' => 'Valid Categories', 'url' => ['/admin/valid-categories']],
+                        '<li class="divider"></li>',
+                        ['label' => 'Partners', 'url' => ['/admin/partners']]
                     ]
                 ]
             )

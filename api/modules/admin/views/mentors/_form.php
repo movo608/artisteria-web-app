@@ -2,6 +2,8 @@
 
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
+use yii\helpers\ArrayHelper;
+use app\models\ValidCategories;
 
 /* @var $this yii\web\View */
 /* @var $model app\models\Mentors */
@@ -19,6 +21,11 @@ use yii\widgets\ActiveForm;
     <?php $form = ActiveForm::begin(); ?>
 
     <?= $form->field($model, 'name')->textInput(['maxlength' => true]) ?>
+
+    <?= $form->field($model, 'category')->dropDownList(
+        ArrayHelper::map(ValidCategories::find()->all(), 'name', 'name'),
+        ['prompt' => 'Choose a category...']
+    ) ?>
 
     <?= $form->field($model, 'image1')->fileInput() ?>
 
