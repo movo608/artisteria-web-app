@@ -40,20 +40,20 @@ $this->title = 'Admin';
                         Admin Artists
                     </td>
                 </tr>
-                <tr id="valid-categories">
-                    <td>
-                        <?= Html::a('/admin/valid-categories', ['/admin/valid-categories']) ?>
-                    </td>
-                    <td>
-                        Admin Valid Categories
-                    </td>
-                </tr>
                 <tr id="partners">
                     <td>
                         <?= Html::a('/admin/partners', ['/admin/partners']) ?>
                     </td>
                     <td>
                         Admin Partners
+                    </td>
+                </tr>
+                <tr id="testimonials">
+                    <td>
+                        <?= Html::a('/admin/testimonials', ['/admin/testimonials']) ?>
+                    </td>
+                    <td>
+                        Admin Testimonials
                     </td>
                 </tr>
         </tbody>

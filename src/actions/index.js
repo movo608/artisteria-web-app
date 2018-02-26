@@ -12,7 +12,8 @@ import {
 	GET_ARTISTS,
 	GET_ARTIST_INFO,
 	GET_PARTNERS,
-	SUBMIT_FORM
+	SUBMIT_FORM,
+	GET_TESTIMONIALS
 } from '../constants/ActionTypes'
 
 export const getMentors = () => {
@@ -120,15 +121,27 @@ export const submitForm = (values) => {
             method: 'post',
             url: `${API}submit`,
             params: values
-		})
-			.then((response) => console.log(response.data))
-			.catch((error) => console.log(error));
+		}).then((response) => dispatch(dispatchSubmitForm(response)));
 	}
 }
 
 const dispatchSubmitForm = (data) => {
 	return {
 		type: SUBMIT_FORM,
+		payload: data
+	}
+}
+
+export const getTestimonials = () => {
+	return async (dispatch) => {
+		axios.get(`${API}get-testimonials`)
+			.then((response) => dispatch(dispatchGetTestimonials(response)));
+	}
+}
+
+const dispatchGetTestimonials = (data) => {
+	return {
+		type: GET_TESTIMONIALS,
 		payload: data
 	}
 }

@@ -15,6 +15,13 @@ class Home extends Component {
 		this.props.getArtists();
 		this.props.getMentors();
 		this.props.revertNavbar();
+
+		let script = document.createElement('script');
+		script.src = '/assets/js/main.js';
+		script.async = true;
+		script.id = 'main_$';
+
+		document.body.appendChild(script);
 	}
 
 	renderBanner() {
@@ -72,7 +79,7 @@ class Home extends Component {
 									<img src="images/elephant.png" alt="" />
 								</div>
 								<p className="caption">
-									The whole program the festival is going to offer.
+									The whole program the festival is going to offer. What is it we want?
 								</p>
 								<Link to="/about/festival" className="link"><span>Learn More</span></Link>
 							</div>
@@ -281,19 +288,15 @@ class Home extends Component {
 		});
 	}
 
-	renderPartners() {
-		return <Partners></Partners>;
-	}
-
 	render() {
 		return(
 			<div>
 				{ this.renderBanner() }
-				<Form />
 				{ this.renderMain() }
+				<Form />
 				{ this.renderArtists() }
 				{ this.renderMentors() }
-				{ this.renderPartners() }
+				<Partners />
 			</div>
 		);
 	}

@@ -60,9 +60,9 @@ AppAsset::register($this);
                         '<li class="divider"></li>',
                         ['label' => 'Artists', 'url' => ['/admin/artists']],
                         '<li class="divider"></li>',
-                        ['label' => 'Valid Categories', 'url' => ['/admin/valid-categories']],
+                        ['label' => 'Partners', 'url' => ['/admin/partners']],
                         '<li class="divider"></li>',
-                        ['label' => 'Partners', 'url' => ['/admin/partners']]
+                        ['label' => 'Testimonials', 'url' => ['/admin/testimonials']]
                     ]
                 ]
             )
