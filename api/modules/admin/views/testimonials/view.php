@@ -30,7 +30,13 @@ $this->params['breadcrumbs'][] = $this->title;
         'attributes' => [
             'id',
             'name',
-            'image',
+            'image' => [
+                'attribute' => 'image',
+                'value' => function($value) {
+                    return '/artisteria-web-app/api/uploads/' . $value->image;
+                },
+                'format' => ['image', ['class' => 'col-md-8 col-sm-8']]
+            ],
             'description',
         ],
     ]) ?>

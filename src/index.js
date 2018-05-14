@@ -25,7 +25,7 @@ const middleware = applyMiddleware(thunkMiddleware);
 
 const store = createStore (
     reducer,
-    middleware,
+	middleware,
 	applyMiddleware(logger)
 );
 
@@ -33,7 +33,7 @@ render(
 	<Provider store={ store }>
 		<Router 
 			forceRefresh={ false }>
-			<div>
+			<div id="$_REACT_ROUTER __%PUBLIC%__">
 				<Switch>
 					<Route exact path='/' render={ () => <LandingLayout><Home/></LandingLayout> } />
 

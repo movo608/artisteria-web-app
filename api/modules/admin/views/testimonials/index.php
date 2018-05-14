@@ -27,8 +27,19 @@ $this->params['breadcrumbs'][] = $this->title;
 
             'id',
             'name',
-            'image',
-            'description',
+            'image' => [
+                'attribute' => 'image',
+                'value' => function($value) {
+                    return '/artisteria-web-app/api/uploads/' . $value->image;
+                },
+                'format' => ['image', ['class' => 'col-md-6 col-sm-6']]
+            ],
+            'description' => [
+                'attribute' => 'description',
+                'value' => function($value) {
+                    return strlen($value->description) > 50 ? substr($value->description, 0, 50) . '...' : $value->description;
+                }
+            ],
 
             ['class' => 'yii\grid\ActionColumn'],
         ],

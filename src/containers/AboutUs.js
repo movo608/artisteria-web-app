@@ -11,7 +11,7 @@ import Testimonials from '../widgets/Testimonials'
 const PORTRAITS = '/images/portraits/'
 
 class AboutUs extends Component {
-	componentDidMount() {
+	componentWillMount() {
 		this.props.changeNavbar();
 	}
 

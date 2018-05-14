@@ -8,6 +8,7 @@ use app\modules\admin\models\TestimonialsSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
+use yii\web\UploadedFile;
 
 /**
  * TestimonialsController implements the CRUD actions for Testimonials model.
@@ -66,8 +67,14 @@ class TestimonialsController extends Controller
     {
         $model = new Testimonials();
 
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id' => $model->id]);
+        if ($model->load(Yii::$app->request->post())) {
+            $model->image = UploadedFile::getInstance($model, 'image');
+            
+            if (Yii::$app->TestimonialsImageUploadComponent->uploadImage($model)) {
+                if ($model->save(false)) {
+                    return $this->redirect(['view', 'id' => $model->id]);
+                }
+            }
         }
 
         return $this->render('create', [

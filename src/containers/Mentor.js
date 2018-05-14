@@ -3,6 +3,7 @@ import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import { UPLOADS } from '../constants/RootURls'
 import $ from 'jquery'
+import BreadCrumbs from '../widgets/BreadCrumbs'
 
 //import actions
 import { 
@@ -41,6 +42,11 @@ class Mentor extends Component {
 							<h1>{ this.props.mentor.name }</h1>
 
 							<h4>Yours at... { this.props.mentor.category }</h4>
+
+							<BreadCrumbs
+								currentPath={`/mentor/${this.state.id}`}
+								currentAlias={this.props.mentor.name}
+							/>
 						</header>
 					</div>
 				</section>

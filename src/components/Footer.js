@@ -21,7 +21,7 @@ export default class Footer extends Component {
 						<li><a href="https://www.snapchat.com/" className="icon fa-snapchat"><span className="label">Snapchat</span></a></li>
 					</ul>
 					&copy; ARTISTERIA { this.state.time }. Built by <a href="https://web.facebook.com/moldovan.andrei.391">Moldovan Andrei</a>
-					<p>Powered by <a href="https://reactjs.org/">React.js</a></p>
+					<p>All content has been created by our team.</p>
 				</div>
 			</footer>
 		);

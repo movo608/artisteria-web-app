@@ -1,0 +1,13 @@
+.breadcrumbs {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.breadcrumbs ul {
+	list-style-type: none;
+}
+
+.breadcrumbs ul li {
+	display: inline-block;
+	font-size: 1.2em;
+}

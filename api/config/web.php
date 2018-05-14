@@ -21,6 +21,7 @@ $config = [
     ],
     'components' => [
         // custom components
+
         'MentorImageUploadComponent' => [
             'class' => 'app\components\MentorImageUploadComponent'
         ],
@@ -30,7 +31,12 @@ $config = [
         'PartnerImageUploadComponent' => [
             'class' => 'app\components\PartnerImageUploadComponent'
         ],
+        'TestimonialsImageUploadComponent' => [
+            'class' => 'app\components\TestimonialsImageUploadComponent'
+        ],
+
         // ./ custom components
+
         'request' => [
             'cookieValidationKey' => 'pm18l52cTRx2ch9K_CBekpNa7yigNYF-',
         ],

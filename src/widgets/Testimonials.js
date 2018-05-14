@@ -34,10 +34,8 @@ export default class Testimonials extends Component {
 										</div>
 										<div className="testimonial-text">
 											<p>
-												"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et.
-												Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et.
-												Lorem ipsum dolor sit amet, consectetur..."<br />
-												<a href="#">Lorem Ipsum, dolor.co.uk</a>
+												"Veni, vidi, vici, έγινε φωτογράφος. Am văzut ce are mai bun arta, și Styx-ul de unde provine aceasta. Am visat să arăt societății române că un artist nu moare, ci trăiește etern."<br />
+												<a href="https://www.facebook.com/moldovan.andrei.391">Oi, here I am.</a>
 											</p>
 										</div>
 									</div>
@@ -47,10 +45,8 @@ export default class Testimonials extends Component {
 										</div>
 										<div className="testimonial-text">
 											<p>
-												"Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip
-												ex ea commodo consequat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit
-												lobortis nisl ut aliquip ex ea commodo consequat..."<br />
-												<a href="#">Minim Veniam, nostrud.com</a>
+												"Viața unui om dobândește adevărata semnificație în momentul în care acesta își descoperă vocația și începe să viseze. De aceea, Artisteria dorește să ofere tuturor posibilitatea de a-și experimenteze visul artistic, folosindu-și talentul pentru a descoperi realitatea."<br />
+												<a href="https://www.facebook.com/elenaale.pirvu">Aici mă găsiți.</a>
 											</p>
 										</div>
 									</div>
@@ -60,10 +56,8 @@ export default class Testimonials extends Component {
 										</div>
 										<div className="testimonial-text">
 											<p>
-												"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et.
-												Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et.
-												Lorem ipsum dolor sit amet, consectetur..."<br />
-												<a href="#">Lorem Ipsum, dolor.co.uk</a>
+												"Jonglând cu școala, olimpiada, proiectele și voluntariatele, Artisteria nu a fost niciun moment doar un alt punct pe o listă lungă. A venit ca ceva normal, o gură de aer proaspăt. Chiar dacă sună clișeic, este un proiect de suflet care sper să vă inspire și să vă  ajute să vă redescoperiți."<br />
+												<a href="https://www.facebook.com/profile.php?id=100008446957441">Sunt aici.</a>
 											</p>
 										</div>
 									</div>
@@ -73,10 +67,9 @@ export default class Testimonials extends Component {
 										</div>
 										<div className="testimonial-text">
 											<p>
-												"Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip
-												ex ea commodo consequat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit
-												lobortis nisl ut aliquip ex ea commodo consequat..."<br />
-												<a href="#">Minim Veniam, nostrud.com</a>
+												"Provocarile îmi dau motivația de zi cu zi. Personal cheia reușitei este formată din implicare și încredere. Astfel, pentru mine Artisteria este provocarea verii. 
+												Un proiect ce ne ajută să aprofundăm în mod interactiv propria pasiune."<br />
+												<a href="https://www.facebook.com/pruna.cristiana">Ne vedem.</a>
 											</p>
 										</div>
 									</div>

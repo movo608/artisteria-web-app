@@ -15,7 +15,7 @@ class Partners extends Component {
 	}
 
 	openWindow(url) {
-		url.substring(0, 4) === 'http' ? window.open(url) : window.open(`http://${url}`);
+		url.substring(0, 4) === 'http' || url.substring(0, 5) === 'https' ? window.open(url) : window.open(`https://${url}`);
 	}
 
 	renderPartner() {

@@ -30,7 +30,7 @@ class Testimonials extends \yii\db\ActiveRecord
         return [
             [['name', 'image', 'description'], 'required'],
             [['name'], 'string', 'max' => 64],
-            [['image'], 'string', 'max' => 256],
+            [['image'], 'file', 'skipOnEmpty' => false, 'extensions' => 'jpg, png'],
             [['description'], 'string', 'max' => 512],
         ];
     }
