@@ -32,23 +32,21 @@ class Mentors extends Component {
 
 	render() {
 		return (
-			<div className="main" id="main">
-				<section className="wrapper style3" id="form">
-					<div className="inner">
-						<header className="align-center">
-							<h2>Our Mentors</h2>
-							<p className="contact-sub">
-								...who will give birth to our wings
-							</p>
-						</header>
-						<div className="content">
-							<div className="mentors flex flex-4">
-								{ this.renderArtists() }
-							</div>
+			<section className="wrapper style1" id="main">
+				<div className="inner">
+					<header>
+						<h2>Mentorii noștri</h2>
+						<p className="partner-sub">
+							...ce ne vor da aripile
+						</p>
+					</header>
+					<div className="content">
+						<div className="flex flex-4">
+							{ this.renderMentors() }
 						</div>
 					</div>
-				</section>
-			</div>
+				</div>
+			</section>
 		);
 	}
 }

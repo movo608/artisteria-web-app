@@ -32,23 +32,21 @@ class Artists extends Component {
 
 	render() {
 		return (
-			<div className="main" id="main">
-				<section className="wrapper style3" id="form">
-					<div className="inner">
-						<header className="align-center">
-							<h2>Our Artists</h2>
-							<p className="contact-sub">
-								...who will change the world
-							</p>
-						</header>
-						<div className="content">
-							<div className="artists flex flex-4">
-								{ this.renderArtists() }
-							</div>
+			<section className="wrapper style1" id="main">
+				<div className="inner">
+					<header>
+						<h2>Mentorii noștri</h2>
+						<p className="partner-sub">
+							...ce ne vor da aripile
+						</p>
+					</header>
+					<div className="content">
+						<div className="flex flex-4">
+							{ this.renderArtists() }
 						</div>
 					</div>
-				</section>
-			</div>
+				</div>
+			</section>
 		);
 	}
 }

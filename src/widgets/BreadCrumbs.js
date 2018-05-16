@@ -3,10 +3,6 @@ import { Link } from 'react-router-dom';
 import './BreadCrumbs.css';
 
 class BreadCrumbs extends React.Component {
-	componentDidMount() {
-		console.log(this.props);
-	}
-
 	render() {
 		return (
 			<div className="breadcrumbs">
