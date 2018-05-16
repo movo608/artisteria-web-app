@@ -26,15 +26,15 @@ class AboutFestival extends Component {
 						<div className="flex flex-2">
 							<div className="col">
 								<p>
-									Da. Urmărim dezvoltarea unor abilități și competențe noi într-ale artei. De altfel, creem artiști.
-									Sau îi ajutăm să își descopere talentul.
+									Da. Urmărim dezvoltarea unor abilități și competențe noi într-ale artei. De altfel, creăm artiști,
+									sau îi ajutăm să își descopere talentul.
 								</p>
 								<img className="image fit" src="/images/about-festival02.jpg" alt="mask, girl, art, beautiful" />
 							</div>
 							<div className="col">
 								<img className="image fit" src="/images/about-festival01.jpg" alt="paintings, art, paintings on walls" />
 								<p>
-									Totuși, îi și învățăm cum se face contactul cu publicul. Și facem și campanii de dezvoltare personală în artă.
+									Îi și învățăm cum se face contactul cu publicul. Și facem campanii de dezvoltare personală în artă.
 								</p>
 							</div>
 						</div>

@@ -38,7 +38,7 @@ class AboutUs extends Component {
 									Proiectul apare dintr-o nevoie în contextul în care tinerii îşi petrec timpul liber din ce în ce mai mult în <span style={{fontWeight: '700'}}>mediul virtual</span>, 
 									datorită numeroșilor factori printre care şi lipsa susţinerii active şi promovarea tinerilor aflaţi la început de drum în
 									domeniul artei, precum şi lipsa resurselor financiare și implicit materiale. Acest proiect îşi propune să faciliteze 
-									procesul dezvoltării şi să promoveze <span style={{fontWeight: '700'}}>elevii artiști</span>. Astfel, sunt încurajate activităţile extracurriculare de petrecere
+									procesul dezvoltării şi să promoveze <span style={{fontWeight: '700'}}>tinerii artiști</span>. Astfel, sunt încurajate activităţile extracurriculare de petrecere
 									în mod benefic a timpului liber şi sunt promovaţi şi susţinuţi artiștii. 
 								</p>
 								<p>
