@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
+import BreadCrumbs from '../widgets/BreadCrumbs'
 
 //import actions
 import { changeNavbar } from '../actions'
@@ -21,6 +22,10 @@ class AboutUs extends Component {
 				<section className="wrapper style1">
 					<div className="inner">
 						<header>
+							<BreadCrumbs
+								currentPath={`/about/us`}
+								currentAlias={'About Us'}
+							/>
 							<h2>Cine suntem?</h2>
 							<p className="contact-sub">
 								Niște oameni adunați din toată țara - un grup mic, cu speranțe mari.

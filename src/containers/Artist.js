@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import { UPLOADS } from '../constants/RootURls'
+import BreadCrumbs from '../widgets/BreadCrumbs'
 
 //import actions
 import { 
@@ -32,6 +33,11 @@ class Artist extends Component {
 							<h1>{ this.props.artist.name }</h1>
 
 							<h4>Yours at... { this.props.artist.category }</h4>
+
+							<BreadCrumbs
+								currentPath={`/artist/${this.state.id}`}
+								currentAlias={this.props.artist.name}
+							/>
 						</header>
 					</div>
 				</section>

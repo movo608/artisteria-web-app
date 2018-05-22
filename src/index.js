@@ -17,6 +17,7 @@ import AboutFestival from './containers/AboutFestival'
 import Mentors from './containers/Mentors'
 import Artist from './containers/Artist'
 import Artists from './containers/Artists'
+import Admin from './containers/Admin'
 
 //import reducers
 import reducer from './reducers'
@@ -26,7 +27,7 @@ const middleware = applyMiddleware(thunkMiddleware);
 const store = createStore (
     reducer,
 	middleware,
-	applyMiddleware(logger)
+	//applyMiddleware(logger)
 );
 
 render(
@@ -45,6 +46,7 @@ render(
 
 					<Route path='/artist/:id' render={ (props) => <LandingLayout><Artist {...props}/></LandingLayout> } />
 					<Route exact path='/artists' render={ () => <LandingLayout><Artists /></LandingLayout> } />
+					<Route exact path='/admin' render={ (props) => <LandingLayout><Admin {...props}/></LandingLayout> } />
 				</Switch>
 			</div>
 		</Router>

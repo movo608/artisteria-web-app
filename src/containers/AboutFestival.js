@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
+import BreadCrumbs from '../widgets/BreadCrumbs'
 
 //import actions
 import { changeNavbar } from '../actions'
@@ -16,6 +17,10 @@ class AboutFestival extends Component {
 				<section className="wrapper">
 					<div className="inner">
 						<header>
+							<BreadCrumbs
+								currentPath={`/about/festival`}
+								currentAlias={'About Festival'}
+							/>
 							<h2>Ce vrem?</h2>
 							<p className="contact-sub">Pe scurt, să arătăm tuturor că nu se moare de foame din artă</p>
 						</header>
