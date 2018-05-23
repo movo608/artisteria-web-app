@@ -245,6 +245,7 @@ class Form extends Component {
 												name="domains"
 												value={ this.state.domain }
 												onChange={ this.handleDomainChange }
+												searchable={ false }
 												options={[
 													{ value: 'Actorie', label: 'Actorie' },
 													{ value: 'Dans', label: 'Dans' },
@@ -279,6 +280,7 @@ class Form extends Component {
 												name="available"
 												value={ this.state.availability }
 												onChange={ this.handleAvailableChange }
+												searchable={ false }
 												options={[
 													{ value: 'Yes', label: 'Yes' },
 													{ value: 'No', label: 'No' }
@@ -292,6 +294,7 @@ class Form extends Component {
 											<Select 
 												name="accommodation"
 												value={ this.state.accommodation }
+												searchable={ false }
 												onChange={ this.handleAccommodationChange }
 												options={[
 													{ value: 'Yes', label: 'Yes' },
@@ -313,6 +316,7 @@ class Form extends Component {
 												name="found_out"
 												value={ this.state.found_out }
 												onChange={ this.handleFoundChange }
+												searchable={ false }
 												options={[
 													{value: 'Friends / Family', label: 'Friends / Family'},
 													{value: 'Social Networks', label: 'Social Networks'},
