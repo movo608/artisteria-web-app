@@ -4064,6 +4064,19 @@ video {
 	}
 }
 
+/**
+* Large Screen responsiveness for .banner
+*/
+@media screen and (max-width: 1920px) and (min-width: 1680px) {
+	.desc {
+		margin-top: 7.20rem;
+	}
+
+	.center-logo {
+		max-width: 300px !important;
+	}
+}
+
 #banner .inner {
 	margin-top: 1.5em;
 }
