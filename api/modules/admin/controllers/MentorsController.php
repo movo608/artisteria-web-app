@@ -66,7 +66,6 @@ class MentorsController extends Controller
     public function actionCreate()
     {
         $model = new Mentors();
-
         if ($model->load(Yii::$app->request->post())) {
             $model->image1 = UploadedFile::getInstance($model, 'image1');
             $model->image2 = UploadedFile::getInstance($model, 'image2');

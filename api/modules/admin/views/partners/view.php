@@ -33,7 +33,8 @@ $this->params['breadcrumbs'][] = $this->title;
             'logo' => [
                 'attribute' => 'logo',
                 'value' => function($value) {
-                    return '/artisteria-web-app/api/uploads/' . $value->logo;
+                    //return '/artisteria-web-app/api/uploads/' . $value->logo;
+                    return 'http://www.artisteria.ro/api/uploads' . $value->logo;
                 },
                 'format' => ['image', ['class' => 'col-md-12 col-sm-12']]
             ],
